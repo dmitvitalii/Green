@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.model.plants
+package me.dmitvitalii.green.model.plant
 
 import java.time.LocalDateTime
 

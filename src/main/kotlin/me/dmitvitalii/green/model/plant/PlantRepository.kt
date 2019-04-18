@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.model.plants
+package me.dmitvitalii.green.model.plant
 
 import me.dmitvitalii.green.controller.GreenRepository
 import org.springframework.data.repository.query.Param
