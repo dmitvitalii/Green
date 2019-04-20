@@ -1,14 +1,13 @@
 package me.dmitvitalii.green.controller.plant
 
 import me.dmitvitalii.green.model.room.RoomRepository
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class PlantsRestController(@Autowired val repository: RoomRepository) {
+class PlantsRestController(val repository: RoomRepository) {
 
 
     // TODO: plant in rooms inside buildings
