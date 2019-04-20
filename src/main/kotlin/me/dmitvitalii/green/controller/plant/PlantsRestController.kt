@@ -13,10 +13,9 @@ class PlantsRestController(val repository: PlantRepository) {
     // TODO: plant in rooms inside buildings
     @GetMapping("/plants")
     fun getPlants(
-            @RequestParam(name = "index", required = false) index: Int,
-            @RequestParam(name = "number", required = false) number: Int
-    ) {
-
+            @RequestParam(name = "index", required = false) index: Int?,
+            @RequestParam(name = "number", required = false) number: Int?
+    ): String {
     }
 
     @GetMapping("/plant/{id}")
