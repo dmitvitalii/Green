@@ -1,11 +1,10 @@
 package me.dmitvitalii.green.model.plant
 
 import me.dmitvitalii.green.model.GreenRepository
+import org.springframework.data.repository.Repository
 import org.springframework.data.repository.query.Param
-import org.springframework.stereotype.Repository
 
-@Repository
-interface PlantRepository : GreenRepository<Plant, Long> {
+interface PlantRepository : GreenRepository<Plant, Long>, Repository<Plant, Long> {
 
     override fun findById(@Param("id") id: Long): Plant?
 
