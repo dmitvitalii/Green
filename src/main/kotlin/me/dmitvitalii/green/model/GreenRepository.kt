@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.controller
+package me.dmitvitalii.green.model
 
 import org.springframework.data.repository.Repository
 

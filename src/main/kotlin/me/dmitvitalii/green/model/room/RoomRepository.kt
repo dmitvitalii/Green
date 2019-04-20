@@ -1,8 +1,10 @@
 package me.dmitvitalii.green.model.room
 
-import me.dmitvitalii.green.controller.GreenRepository
+import me.dmitvitalii.green.model.GreenRepository
 import org.springframework.data.repository.query.Param
+import org.springframework.stereotype.Repository
 
+@Repository
 interface RoomRepository : GreenRepository<Room, Long> {
 
     override fun findById(@Param("id") id: Long): Room?
