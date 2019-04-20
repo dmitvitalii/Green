@@ -1,14 +1,11 @@
 package me.dmitvitalii.green.model
 
-import org.springframework.data.repository.Repository
-
-interface GreenRepository<Type, ID> : Repository<Type, ID> {
+interface GreenRepository<Type, ID> {
 
     fun findById(id: Long): Type?
 
-    fun findAllIn(parentId: ID): Collection<Type>
+    fun findAllById(parentId: ID): Collection<Type>
 
-    fun put(element: Type):ID
+    fun save(element: Type):ID
 
-    fun remove(id: Long)
 }

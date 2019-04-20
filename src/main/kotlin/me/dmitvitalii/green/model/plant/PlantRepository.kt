@@ -9,9 +9,8 @@ interface PlantRepository : GreenRepository<Plant, Long> {
 
     override fun findById(@Param("id") id: Long): Plant?
 
-    override fun findAllIn(@Param("parentId") parentId: Long): Collection<Plant>
+    override fun findAllById(@Param("parentId") parentId: Long): Collection<Plant>
 
-    override fun put(element: Plant): Long
+    override fun save(element: Plant): Long
 
-    override fun remove(@Param("id") id: Long)
 }
