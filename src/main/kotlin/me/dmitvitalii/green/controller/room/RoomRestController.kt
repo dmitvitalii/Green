@@ -19,7 +19,7 @@ class RoomRestController(val repository: RoomRepository) {
 
     }
 
-    @GetMapping("/room/{id}")
+    @GetMapping("/rooms/{id}")
     fun getRoom(@PathVariable(name = "id") id: Long) = repository.findById(id)
             ?: throw NoSuchElementException("Cannot find any rooms with id $id")
 }
