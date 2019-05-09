@@ -12,5 +12,6 @@ CREATE TABLE plant (
     last_irrigation DATE NOT NULL,
     irrigation_period INT NOT NULL,
     description VARCHAR,
+    condition VARCHAR(50) NOT NULL,
     soil VARCHAR(50) -- can also be taken from outside
 );
