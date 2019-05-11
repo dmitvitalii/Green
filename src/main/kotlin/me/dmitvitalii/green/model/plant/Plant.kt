@@ -1,21 +1,18 @@
 package me.dmitvitalii.green.model.plant
 
 import java.time.LocalDateTime
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity data class Plant(
         @Id @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
-        val roomId: Long,
-        val nick: String,
-        val irrigated: LocalDateTime,
-        val irrigationPeriod: Int,
-        val name: String,
-        val type: String,
-        val soil: String,
+        @Column(nullable = false) val roomId: Long,
+        @Column(nullable = false) val nick: String,
+        @Column(nullable = false) val irrigated: LocalDateTime,
+        @Column(nullable = false) val irrigationPeriod: Int,
+        @Column(nullable = false) val name: String,
+        @Column(nullable = false) val type: String,
+        @Column(nullable = false) val soil: String,
         val description: String?,
-        val condition: String
+        @Column(nullable = false) val condition: String
 )
