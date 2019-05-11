@@ -9,5 +9,6 @@ import javax.persistence.Id
         @Id @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
         val parentId: Long?,
+        val childId: Long?,
         val name: String
 )
