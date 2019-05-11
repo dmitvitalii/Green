@@ -12,7 +12,10 @@ import javax.persistence.Id
         val roomId: Long,
         val nick: String,
         val irrigated: LocalDateTime,
+        val irrigationPeriod: Int,
         val name: String,
         val type: String,
-        val soil: String
+        val soil: String,
+        val description: String?,
+        val condition: String
 )
