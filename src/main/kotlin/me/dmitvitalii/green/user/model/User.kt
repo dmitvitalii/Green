@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.model.user
+package me.dmitvitalii.green.user.model
 
 import java.time.LocalDateTime
 import javax.persistence.*

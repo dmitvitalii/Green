@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.model.room
+package me.dmitvitalii.green.room.model
 
 import javax.persistence.*
 

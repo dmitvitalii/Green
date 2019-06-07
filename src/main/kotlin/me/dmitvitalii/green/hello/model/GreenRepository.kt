@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.model
+package me.dmitvitalii.green.hello.model
 
 interface GreenRepository<Type, ID> {
 

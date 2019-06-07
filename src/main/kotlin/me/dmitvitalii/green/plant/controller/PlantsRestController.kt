@@ -1,6 +1,6 @@
-package me.dmitvitalii.green.controller.plant
+package me.dmitvitalii.green.plant.controller
 
-import me.dmitvitalii.green.model.plant.PlantRepository
+import me.dmitvitalii.green.plant.model.PlantRepository
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam

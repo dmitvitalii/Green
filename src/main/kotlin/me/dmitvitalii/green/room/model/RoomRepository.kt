@@ -1,6 +1,6 @@
-package me.dmitvitalii.green.model.room
+package me.dmitvitalii.green.room.model
 
-import me.dmitvitalii.green.model.GreenRepository
+import me.dmitvitalii.green.hello.model.GreenRepository
 import org.springframework.data.repository.Repository
 import org.springframework.data.repository.query.Param
 

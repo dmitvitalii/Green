@@ -1,25 +1,25 @@
-package me.dmitvitalii.green.controller.room
+package me.dmitvitalii.green.user.controller
 
-import me.dmitvitalii.green.model.room.RoomRepository
+import me.dmitvitalii.green.user.model.UserRepository
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class RoomRestController(val repository: RoomRepository) {
+class UserRestController(val repository: UserRepository) {
 
 
     // TODO: plant in rooms inside buildings
-    @GetMapping("/rooms")
-    fun getRooms(
+    @GetMapping("/users")
+    fun geUsers(
             @RequestParam(name = "index", required = false) index: Int,
             @RequestParam(name = "number", required = false) number: Int
     ) {
 
     }
 
-    @GetMapping("/rooms/{id}")
-    fun getRoom(@PathVariable(name = "id") id: Long) = repository.findById(id)
+    @GetMapping("/users/{id}")
+    fun getUser(@PathVariable(name = "id") id: Long) = repository.findById(id)
             ?: throw NoSuchElementException("Cannot find any rooms with id $id")
 }

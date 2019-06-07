@@ -1,4 +1,4 @@
-package me.dmitvitalii.green.controller
+package me.dmitvitalii.green.hello.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
