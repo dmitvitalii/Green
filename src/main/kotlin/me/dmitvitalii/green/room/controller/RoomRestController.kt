@@ -13,8 +13,8 @@ class RoomRestController(val repository: RoomRepository) {
     // TODO: plant in rooms inside buildings
     @GetMapping("/rooms")
     fun getRooms(
-            @RequestParam(name = "index", required = false) index: Int,
-            @RequestParam(name = "number", required = false) number: Int
+            @RequestParam(name = "index", required = false) index: Int?,
+            @RequestParam(name = "number", required = false) number: Int?
     ) {
         repository.findAll()
     }
