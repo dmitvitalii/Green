@@ -1,13 +1,13 @@
-package me.dmitvitalii.green.user.controller
+package me.dmitvitalii.green.customer.controller
 
-import me.dmitvitalii.green.user.model.UserRepository
+import me.dmitvitalii.green.customer.model.CustomerRepository
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class UserRestController(val repository: UserRepository) {
+class CustomerRestController(val repository: CustomerRepository) {
 
     // TODO: plant in rooms inside buildings
     @GetMapping("/users")

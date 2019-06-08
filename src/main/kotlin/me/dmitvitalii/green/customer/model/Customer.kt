@@ -1,9 +1,9 @@
-package me.dmitvitalii.green.user.model
+package me.dmitvitalii.green.customer.model
 
 import javax.persistence.*
 
 @Entity
-class Employee(
+class Customer(
         @Id @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
         @Column(nullable = false, length = 50) val name: String
