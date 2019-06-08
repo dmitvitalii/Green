@@ -16,9 +16,9 @@ class PlantsRestController(val repository: PlantRepository) {
             @RequestParam(name = "index", required = false) index: Int?,
             @RequestParam(name = "number", required = false) number: Int?
     ) {
+        repository.findAll()
     }
 
     @GetMapping("/plants/{id}")
-    fun getPlant(@PathVariable(name = "id") id: Long) = repository.findById(id)
-            ?: throw NoSuchElementException("Cannot find any plant with id $id")
+    fun getPlant(@PathVariable(name = "id") id: Long) = repository.findById(id).get()
 }

@@ -12,8 +12,8 @@ class CustomerRestController(val repository: CustomerRepository) {
     // TODO: plant in rooms inside buildings
     @GetMapping("/users")
     fun geUsers(
-            @RequestParam(name = "index", required = false) index: Int,
-            @RequestParam(name = "number", required = false) number: Int
+            @RequestParam(name = "index", required = false) index: Int?,
+            @RequestParam(name = "number", required = false) number: Int?
     ) {
         repository.findAll()
     }

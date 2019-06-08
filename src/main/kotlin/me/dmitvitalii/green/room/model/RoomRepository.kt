@@ -1,14 +1,11 @@
 package me.dmitvitalii.green.room.model
 
-import org.springframework.data.repository.Repository
-import org.springframework.data.repository.query.Param
+import org.springframework.data.repository.CrudRepository
+import java.util.*
 
-interface RoomRepository : Repository<Room, Long> {
 
-    fun findById(@Param("id") id: Long): Room?
+interface RoomRepository : CrudRepository<Room, Long> {
 
-    fun findAllById(@Param("parentId") parentId: Long): Collection<Room>
-
-    fun save(element: Room): Long
+    override fun findById(id: Long): Optional<Room>
 
 }
