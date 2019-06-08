@@ -1,13 +1,13 @@
 package me.dmitvitalii.green.user.model
 
-import org.springframework.data.repository.Repository
-import org.springframework.data.repository.query.Param
+import org.springframework.data.repository.CrudRepository
+import java.util.*
 
-interface UserRepository : Repository<User, Long> {
+interface UserRepository : CrudRepository<User, Long> {
 
-    fun findById(@Param("id") id: Long): User?
+    override fun findById(id: Long): Optional<User>
 
-    fun findAllById(@Param("parentId") parentId: Long): Collection<User>
+    fun findAllById(parentId: Long): Collection<User>
 
     fun save(element: User): Long
 

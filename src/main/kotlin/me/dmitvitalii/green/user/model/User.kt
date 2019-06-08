@@ -3,7 +3,8 @@ package me.dmitvitalii.green.user.model
 import java.time.LocalDateTime
 import javax.persistence.*
 
-@Entity data class User(
+@Entity
+class User(
         @Id @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
         @Column(nullable = false) val roomId: Long,

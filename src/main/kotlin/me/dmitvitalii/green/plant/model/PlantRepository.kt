@@ -1,13 +1,13 @@
 package me.dmitvitalii.green.plant.model
 
-import org.springframework.data.repository.Repository
-import org.springframework.data.repository.query.Param
+import org.springframework.data.repository.CrudRepository
+import java.util.*
 
-interface PlantRepository : Repository<Plant, Long> {
+interface PlantRepository : CrudRepository<Plant, Long> {
 
-    fun findById(@Param("id") id: Long): Plant?
+    override fun findById(id: Long): Optional<Plant>
 
-    fun findAllById(@Param("parentId") parentId: Long): Collection<Plant>
+    fun findAllById(parentId: Long): Collection<Plant>
 
     fun save(element: Plant): Long
 
