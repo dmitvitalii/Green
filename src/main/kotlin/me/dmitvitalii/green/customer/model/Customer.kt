@@ -6,5 +6,7 @@ import javax.persistence.*
 class Customer(
         @Id @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
-        @Column(nullable = false, length = 50) val name: String
+
+        @Column(nullable = false, length = 50)
+        val name: String
 )
