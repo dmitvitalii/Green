@@ -1,15 +1,18 @@
 package me.dmitvitalii.green.plant.model
 
+import me.dmitvitalii.green.room.model.Room
 import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
 data class Plant(
-        @Id @GeneratedValue(strategy = GenerationType.AUTO)
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
 
-        @Column(nullable = false)
-        val roomId: Long,
+        @ManyToOne
+        @JoinColumn(name = "room_id", nullable = false)
+        val room: Room,
 
         @Column(nullable = false)
         val nick: String,
@@ -29,6 +32,7 @@ data class Plant(
         @Column(nullable = false)
         val soil: String,
 
+        @Column(nullable = true)
         val description: String?,
 
         @Column(nullable = false)
