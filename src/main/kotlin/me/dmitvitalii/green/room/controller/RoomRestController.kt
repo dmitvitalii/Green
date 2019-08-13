@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class RoomRestController(val repository: RoomRepository) {
 
-
-    // TODO: plant in rooms inside buildings
     @GetMapping("/rooms")
     fun getRooms(): MutableIterable<Room> = repository.findAll()
 
