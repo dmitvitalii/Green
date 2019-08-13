@@ -18,8 +18,6 @@ class RoomRestController(val repository: RoomRepository) {
     @GetMapping("/room/{id}")
     fun getRoom(@PathVariable(name = "id") id: Long) = repository.findById(id).get()
 
-
-    // TODO: plant in rooms inside buildings
     @GetMapping("/room/{id}/plants")
     fun getPlants(
             @PathVariable(name = "id") id: Long,
