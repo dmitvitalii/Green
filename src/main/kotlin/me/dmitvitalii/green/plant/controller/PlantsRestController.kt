@@ -12,9 +12,15 @@ class PlantsRestController(val repository: PlantRepository) {
     fun getPlant(@PathVariable(name = "id") id: Long) = repository.findById(id).get()
 
     @PatchMapping("room/{id}/plant/{id}/_irrigate")
-    fun irrigatePlant(@PathVariable(name = "id") id: Long, @RequestBody plant: Plant) {
+    fun irrigatePlant(
+            @PathVariable(name = "id") id: Long,
+            @RequestBody plant: Plant
+    ) {
         val changePlant = repository.findById(id).get()
-        val newPlant = changePlant.copy(irrigated = plant.irrigated)
+        val newPlant = changePlant.copy(
+                lastIrrigated = plant.lastIrrigated,
+                lastIrrigatedUserId = plant.lastIrrigatedUserId
+        )
         repository.deleteById(id)
         repository.save(newPlant)
     }

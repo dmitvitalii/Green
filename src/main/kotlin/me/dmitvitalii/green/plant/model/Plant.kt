@@ -18,7 +18,10 @@ data class Plant(
         val nick: String,
 
         @Column(nullable = false)
-        val irrigated: LocalDateTime,
+        val lastIrrigated: LocalDateTime,
+
+        @Column(nullable = true)
+        val lastIrrigatedUserId: Int?,
 
         @Column(nullable = false)
         val irrigationPeriod: Int,
