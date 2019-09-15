@@ -24,9 +24,6 @@ data class Plant(
         val irrigationPeriod: Int,
 
         @Column(nullable = false)
-        val name: String,
-
-        @Column(nullable = false)
         val type: String,
 
         @Column(nullable = false)
