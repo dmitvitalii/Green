@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.*
 class PlantsRestController(val repository: PlantRepository) {
 
     @ResponseBody
-    @GetMapping("/plant/{id}")
+    @GetMapping("room/{id}/plant/{id}")
     fun getPlant(@PathVariable(name = "id") id: Long) = repository.findById(id).get()
 
-    @PatchMapping("/plant/{id}/irrigate")
+    @PatchMapping("room/{id}/plant/{id}/_irrigate")
     fun irrigatePlant(@PathVariable(name = "id") id: Long, @RequestBody plant: Plant) {
         val changePlant = repository.findById(id).get()
         val newPlant = changePlant.copy(irrigated = plant.irrigated)
