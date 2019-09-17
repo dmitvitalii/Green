@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.*
 class PlantsRestController(val repository: PlantRepository) {
 
     @ResponseBody
-    @GetMapping("room/{id}/plant/{id}")
+    @GetMapping("plant/{id}")
     fun getPlant(@PathVariable(name = "id") id: Long) = repository.findById(id).get()
 
-    @PatchMapping("room/{id}/plant/{id}/_irrigate")
+    @PatchMapping("plant/{id}/_irrigate")
     fun irrigatePlant(
             @PathVariable(name = "id") id: Long,
             @RequestBody plant: Plant
