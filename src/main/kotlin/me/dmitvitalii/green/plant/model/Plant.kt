@@ -17,6 +17,7 @@ data class Plant(
         @Column(nullable = false)
         val nick: String,
 
+        // TODO: use id of events. Irrigation is an event
         @Column(nullable = false)
         val lastIrrigated: LocalDateTime,
 
